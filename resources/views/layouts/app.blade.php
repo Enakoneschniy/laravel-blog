@@ -8,11 +8,11 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -72,11 +72,12 @@
         </div>
     </nav>
 
-    @yield('content')
-
+    <div class="container">
+        @yield('content')
+    </div>
     <!-- JavaScripts -->
-    <script src="js/jquery-3.0.0.min.js" ></script>
-    <script src="js/bootstrap.min.js" ></script>
+    <script src="/js/jquery-2.2.1.min.js" ></script>
+    <script src="/js/bootstrap.min.js" ></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
