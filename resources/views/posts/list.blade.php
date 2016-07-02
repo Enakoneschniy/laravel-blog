@@ -11,7 +11,7 @@
                     </div>
 
                     <div class="panel-body">
-                        {{$post->content}}
+                        {{$post->preview_text}}
                         <div>
                             <a href="{{url('/posts',$post->id)}}">More</a>
                         </div>

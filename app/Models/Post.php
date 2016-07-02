@@ -8,8 +8,9 @@ class Post extends Model
 {
     protected $fillable = [
         'title',
-        'content',
-        'user_id',
+        'preview_text',
+        'detail_text',
+        'preview_image',
         'active'
     ];
     
