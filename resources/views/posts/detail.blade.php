@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="panel-body">
-                    {{$post->detail_text}}
+                    {!! $post->detail_text !!}
                     <div>
                         <a href="javascript:history.back();">Back</a>
                     </div>

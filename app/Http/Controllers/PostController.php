@@ -8,8 +8,10 @@ use App\Http\Requests;
 use App\Models\Post;
 
 class PostController extends Controller{
-    public function index(){
-        $res = Post::where('active', 1)->get();
+    
+    public function index(Post $post){
+        //$res = Post::where('active', 1)->get();
+        $res = $post->getPublished();
         return view('posts.list',['posts' => $res]);
     }
 

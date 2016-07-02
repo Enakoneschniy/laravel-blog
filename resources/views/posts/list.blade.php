@@ -1,23 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+    {!! $posts->render() !!}
     @foreach($posts as $post)
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        {{$post->title}}
-                        <span class="pull-right">{{$post->user->name}}</span>
-                    </div>
-
-                    <div class="panel-body">
-                        {{$post->preview_text}}
-                        <div>
-                            <a href="{{url('/posts',$post->id)}}">More</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="{{url('/posts', $post->id)}}">
+                    <img class="media-object" src="/uploads/posts/resize/{{$post->preview_image}}" alt="{{$post->title}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="{{url('/posts', $post->id)}}"><h3 class="media-heading">{{$post->title}}</h3></a>
+                {!! $post->preview_text !!}
             </div>
         </div>
     @endforeach
+    {!! $posts->render() !!}
 @endsection
