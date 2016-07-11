@@ -13,6 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -26,6 +27,7 @@
     </style>
 </head>
 <body id="app-layout">
+    <input type="hidden" id="_token" name="_token" value="{{csrf_token()}}">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -78,6 +80,7 @@
     <!-- JavaScripts -->
     <script src="/js/jquery-2.2.1.min.js" ></script>
     <script src="/js/bootstrap.min.js" ></script>
+    <script src="/js/rating.js" ></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>

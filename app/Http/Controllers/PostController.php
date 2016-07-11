@@ -19,4 +19,20 @@ class PostController extends Controller{
         $res = Post::find($id);
         return view('posts.detail', ['post' => $res]);
     }
+
+    public function ratingPlus(Request $request){
+        $postId = $request->input('id');
+        $post = Post::find($postId);
+        $post->rating += 1;
+        $post->save();
+        return json_encode(['rating' => $post->rating]);
+    }
+
+    public function ratingMinus(Request $request){
+        $postId = $request->input('id');
+        $post = Post::find($postId);
+        $post->rating -= 1;
+        $post->save();
+        return json_encode(['rating' => $post->rating]);
+    }
 }

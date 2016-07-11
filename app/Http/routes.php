@@ -42,3 +42,8 @@ Route::group(['prefix' => 'posts'], function (){
     Route::get('/', 'PostController@index');
     Route::get('/{id}', 'PostController@post');
 });
+
+Route::group(['prefix' => 'rating'], function (){
+    Route::post('/plus', 'PostController@ratingPlus');
+    Route::post('/minus', 'PostController@ratingMinus');
+});
